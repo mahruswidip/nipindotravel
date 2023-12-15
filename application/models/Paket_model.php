@@ -92,6 +92,15 @@ class Paket_model extends CI_Model
         }
         return $this->db->get('img_dropzone')->result_array();
     }
+    function get_galeri_nipindo_only($params = array())
+    {
+        $this->db->where('travel', 'Nipindo Travel');
+        $this->db->order_by('img_dropzone.id', 'desc');
+        if (isset($params) && !empty($params)) {
+            $this->db->limit($params['limit'], $params['offset']);
+        }
+        return $this->db->get('img_dropzone')->result_array();
+    }
 
     function get_all_artikel($params = array())
     {

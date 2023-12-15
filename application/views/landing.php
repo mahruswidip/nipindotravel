@@ -536,7 +536,7 @@
                 <?php foreach ($galeri as $g) { ?>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="<?php echo 'http://localhost/nipindo/be/' . 'assets/uploads/' . $g['nama']; ?>" class="img-fluid" alt="">
+                            <img src="<?php echo 'https://alfatihahtravel.com/admin/assets/images/galeri/' . $g['nama']; ?>" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <!-- <div class="portfolio-links">
                                         <a href="<?php echo 'http://localhost/nipindo/be/' . 'assets/uploads/' . $g['nama']; ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
@@ -559,59 +559,57 @@
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
                     <div class="section-title">
-                        <h2>Contact</h2>
-                        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                            sit in iste officiis commodi quidem hic quas.</p>
+                        <h2>Kontak Kami</h2>
+                        <p>Temukan Dukungan untuk Kebutuhan Perjalanan Anda. Dapatkan jawaban dan solusi atas pertanyaan Anda di sini. Kami selalu siap untuk membantu Anda.</p>
                     </div>
                 </div>
 
                 <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                    <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+                    <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.473353852619!2d106.88847801527538!3d-6.201113562475438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4bdc4e88c31%3A0xcf8ed9fdb2fe32ff!2sNipindo%20Travel%20(Official)!5e0!3m2!1sen!2sid!4v1650417807936!5m2!1sen!2sid" frameborder="0" allowfullscreen></iframe>
                     <div class="info mt-4">
                         <i class="bi bi-geo-alt"></i>
-                        <h4>Location:</h4>
-                        <p>A108 Adam Street, New York, NY 535022</p>
+                        <h4>Alamat :</h4>
+                        <p>Jl. Pegambiran No.5, RT.12/RW.7, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 mt-4">
                             <div class="info">
                                 <i class="bi bi-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>info@example.com</p>
+                                <h4>Email :</h4>
+                                <p>nipindotravel@gmail.com</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="info w-100 mt-4">
                                 <i class="bi bi-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+1 5589 55488 55s</p>
+                                <h4>Nomor HP / Whatsapp :</h4>
+                                <p>+62 812 3327 059</p>
                             </div>
                         </div>
                     </div>
 
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
                             </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                             </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form> -->
                 </div>
             </div>
 

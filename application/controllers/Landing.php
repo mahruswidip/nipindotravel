@@ -17,7 +17,7 @@ class Landing extends CI_Controller
         $data['paketumroh'] = $this->Paket_model->get_paket_umroh_only();
         $data['pakettour'] = $this->Paket_model->get_paket_tour_only();
         $data['pakethaji'] = $this->Paket_model->get_paket_haji_only();
-        $data['galeri'] = $this->Paket_model->get_all_galeri();
+        $data['galeri'] = $this->Paket_model->get_galeri_nipindo_only();
         $data['artikel'] = $this->Paket_model->get_all_artikel();
 
         $data['_view'] = 'landing';
