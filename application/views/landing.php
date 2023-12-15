@@ -247,26 +247,27 @@
                     </div>
                     <div class="row">
                         <?php foreach ($paketumroh as $p) { ?>
-                            <!-- <?php $id = $p['id_paket'] ?> -->
                             <div class="col-md-4 d-flex align-items-stretch mb-4">
-                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                    <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
-                                    <h4><a href="<?php echo base_url() . 'index/view/' . $id; ?>"><?php echo $p['nama_program'] ?></a></h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                echo 'DP Mulai :';
+                                <a href="<?php echo base_url() . 'paket/detail_paket/' . $p['id_paket']; ?>">
+                                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                                        <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
+                                        <h4><?php echo $p['nama_program'] ?></h4>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
+                                                                                    echo 'DP Mulai :';
+                                                                                } else {
+                                                                                    echo 'Harga Mulai :';
+                                                                                } ?></h6>
+                                                <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
+                                                                                echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
                                                                             } else {
-                                                                                echo 'Harga Mulai :';
-                                                                            } ?></h6>
-                                            <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                            echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
-                                                                        } else {
-                                                                            echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
-                                                                        } ?></h4>
+                                                                                echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
+                                                                            } ?></h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         <?php } ?>
                     </div>
@@ -275,26 +276,27 @@
                     </div>
                     <div class="row">
                         <?php foreach ($pakethaji as $p) { ?>
-                            <!-- <?php $id = $p['id_paket'] ?> -->
                             <div class="col-md-4 d-flex align-items-stretch mb-4">
-                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                    <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
-                                    <h4><a href="<?php echo base_url() . 'index/view/' . $id; ?>"><?php echo $p['nama_program'] ?></a></h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                echo 'DP Mulai :';
+                                <a href="<?php echo base_url() . 'paket/detail_paket/' . $p['id_paket']; ?>">
+                                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                                        <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
+                                        <h4><?php echo $p['nama_program'] ?></h4>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
+                                                                                    echo 'DP Mulai :';
+                                                                                } else {
+                                                                                    echo 'Harga Mulai :';
+                                                                                } ?></h6>
+                                                <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
+                                                                                echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
                                                                             } else {
-                                                                                echo 'Harga Mulai :';
-                                                                            } ?></h6>
-                                            <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                            echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
-                                                                        } else {
-                                                                            echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
-                                                                        } ?></h4>
+                                                                                echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
+                                                                            } ?></h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         <?php } ?>
                     </div>
@@ -303,26 +305,27 @@
                     </div>
                     <div class="row">
                         <?php foreach ($pakettour as $p) { ?>
-                            <!-- <?php $id = $p['id_paket'] ?> -->
                             <div class="col-md-4 d-flex align-items-stretch mb-4">
-                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                    <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
-                                    <h4><a href="<?php echo base_url() . 'index/view/' . $id; ?>"><?php echo $p['nama_program'] ?></a></h4>
-                                    <div class="row">
-                                        <div class="col">
-                                            <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                echo 'DP Mulai :';
+                                <a href="<?php echo base_url() . 'paket/detail_paket/' . $p['id_paket']; ?>">
+                                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                                        <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
+                                        <h4><?php echo $p['nama_program'] ?></h4>
+                                        <div class="row">
+                                            <div class="col">
+                                                <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
+                                                                                    echo 'DP Mulai :';
+                                                                                } else {
+                                                                                    echo 'Harga Mulai :';
+                                                                                } ?></h6>
+                                                <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
+                                                                                echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
                                                                             } else {
-                                                                                echo 'Harga Mulai :';
-                                                                            } ?></h6>
-                                            <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                            echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
-                                                                        } else {
-                                                                            echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
-                                                                        } ?></h4>
+                                                                                echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
+                                                                            } ?></h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         <?php } ?>
                     </div>
