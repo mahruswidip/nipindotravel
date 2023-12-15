@@ -278,7 +278,7 @@
                             <!-- <?php $id = $p['id_paket'] ?> -->
                             <div class="col-md-4 d-flex align-items-stretch mb-4">
                                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                    <img src="<?php echo 'http://localhost/nipindo/be/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
+                                    <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
                                     <h4><a href="<?php echo base_url() . 'index/view/' . $id; ?>"><?php echo $p['nama_program'] ?></a></h4>
                                     <div class="row">
                                         <div class="col">
@@ -306,7 +306,7 @@
                             <!-- <?php $id = $p['id_paket'] ?> -->
                             <div class="col-md-4 d-flex align-items-stretch mb-4">
                                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                    <img src="<?php echo 'http://localhost/nipindo/be/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
+                                    <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
                                     <h4><a href="<?php echo base_url() . 'index/view/' . $id; ?>"><?php echo $p['nama_program'] ?></a></h4>
                                     <div class="row">
                                         <div class="col">
