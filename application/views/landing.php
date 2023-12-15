@@ -334,6 +334,42 @@
 
         </div>
     </section><!-- End Portfolio Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-title" data-aos="fade-right">
+                        <h2>Blog Artikel</h2>
+                        <p>Baca juga informasi menarik, tips & trik seputar traveling berikut ini.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <?php foreach ($artikel as $artikel_item) : ?>
+                            <div class="col-md-12 align-items-stretch">
+                                <a href="<?php echo site_url('artikel/view/' . $artikel_item['id_artikel']); ?>">
+                                    <div class="row justify-content-between align-items-center">
+                                        <div class="col-lg-5">
+                                            <figure class="img-play-video">
+                                                <img src="https://alfatihahtravel.com/admin/assets/images/artikel/<?php echo $artikel_item['artikel_img']; ?>" alt="Image" class="img-fluid rounded-20">
+                                            </figure>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h4 class="text-left"><?php echo $artikel_item['judul_artikel']; ?></h4>
+                                            <p><?php echo substr($artikel_item['konten'], 0, 100); ?>...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <!-- <section id="testimonials" class="testimonials section-bg">

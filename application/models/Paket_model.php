@@ -107,6 +107,12 @@ class Paket_model extends CI_Model
         $this->db->order_by('artikel.id_artikel', 'desc');
         return $this->db->get('artikel')->result_array();
     }
+    function get_artikel_nipindo_only($params = array())
+    {
+        $this->db->where('travel', 'Nipindo Travel');
+        $this->db->order_by('artikel.id_artikel', 'desc');
+        return $this->db->get('artikel')->result_array();
+    }
 
     function get_artikel($id)
     {

@@ -11,7 +11,7 @@
         color: orange;
         font-size: 1.8em;
     }
-</style><!-- Detail Paket Section -->
+</style>
 <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
