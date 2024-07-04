@@ -35,7 +35,7 @@
 
             <div class="row gy-4">
 
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <div class="portfolio-details-slider swiper">
                         <div class="swiper-wrapper align-items-center">
 
@@ -56,7 +56,6 @@
                     </div>
                 </div>
                 <div class="col-lg-1">
-
                 </div>
                 <div class="col-lg-4">
                     <div class="portfolio-info">
@@ -81,12 +80,15 @@
                         </ul>
                         <a href="https://api.whatsapp.com/send/?phone=628113003258&text=Halo%20Nipindo%20Travel%2C%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20paket%20<?php echo $encoded; ?>&app_absent=0" class="btn btn-success">Pesan Sekarang</a>
                     </div>
-                    <!-- <div class="portfolio-description">
-                            <h2>This is an example of portfolio detail</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="portfolio-description">
+                            <h2>Detail Paket</h2>
+                            <p><?php echo $paket[0]['konten']; ?>
                             <p>
-                                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                            </p>
-                        </div> -->
+                        </div>
+                    </div>
                 </div>
 
             </div>
