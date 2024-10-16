@@ -1,3 +1,22 @@
+<!-- Modal -->
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="promoModalLabel">PROMO TERBARU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center">
+
+                <img src="https://alfatihahtravel.com/admin/assets/images/<?php echo $paket_terbaru[0]['paket_img'] ?>" alt="Image" class="img-fluid" style="display: block;" id="mainImage">
+            </div>
+            <div class="modal-footer">
+                <a href="https://api.whatsapp.com/send?phone=6281133399833&text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20mengenai%20Promo%20Terbaru%20<?php echo $paket_terbaru[0]['nama_program'] ?>%20yang%20ada%20di%20Website%2C%20%F0%9F%98%8A" class="btn btn-primary">Info Lebih Lanjut</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
@@ -15,31 +34,6 @@
 <!-- End Hero -->
 
 <main id="main">
-
-    <!-- Modal -->
-    <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">PROMO TERBARU</h5>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-                <div class="modal-body d-flex align-items-center">
-                    <!-- Gambar loading -->
-                    <!-- <div class="spinner-border" role="status" id="loadingImage">
-                </div> -->
-                    <!-- <img src="loading.gif" alt="Loading..." class="loading-img" id="loadingImage"> -->
-
-                    <!-- Gambar utama (sembunyikan saat loading) -->
-                    <img src="https://alfatihahtravel.com/admin/assets/images/<?php echo $paket_terbaru[0]['paket_img'] ?>" alt="Image" class="img-fluid" style="display: block;" id="mainImage">
-                </div>
-                <div class="modal-footer">
-                    <a href="https://api.whatsapp.com/send?phone=6281133399833&text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20mengenai%20Promo%20Terbaru%20<?php echo $paket_terbaru[0]['nama_program'] ?>%20yang%20ada%20di%20Website%2C%20%F0%9F%98%8A" class="btn btn-primary">Info Lebih Lanjut</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
         <div class="container">
@@ -682,7 +676,7 @@
 </main><!-- End #main -->
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 
 <script>
     // Fungsi untuk mendapatkan nilai dari sessionStorage
