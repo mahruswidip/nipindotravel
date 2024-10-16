@@ -85,6 +85,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-description">
                             <h2>Detail Paket</h2>
+                            <!-- <?php print_r($paket[0]) ?> -->
                             <p><?php echo $paket[0]['konten']; ?>
                             <p>
                         </div>
