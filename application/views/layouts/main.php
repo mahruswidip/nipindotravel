@@ -28,24 +28,25 @@
     <!-- Template Main CSS File -->
     <link href="<?php echo base_url('assets/') ?>css/style.css" rel="stylesheet">
     <style>
-.sold-out-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 30%;
-    background-color: rgba(255, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.sold-out-overlay span {
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-}
-</style>
+        .sold-out-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 30%;
+            background-color: rgba(255, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sold-out-overlay span {
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
 
 
     <!-- =======================================================
@@ -71,6 +72,7 @@
                         <li><a class="nav-link scrollto active" href="<?php echo site_url(); ?>">Beranda</a></li>
                         <li><a class="nav-link scrollto" href="#why-us">Tentang Kami</a></li>
                         <li><a class="nav-link scrollto" href="#services">Paket</a></li>
+                        <li><a class="nav-link scrollto" href="<?php echo site_url(); ?>'/haji'">Haji</a></li>
                         <li><a class="nav-link scrollto " href="#portfolio">Kontak</a></li>
                         <li><a class="getstarted scrollto" href="<?php echo site_url('admin'); ?>">Masuk</a></li>
                     </ul>
@@ -145,27 +147,27 @@
 
         <div class="container d-md-flex py-4">
 
-           <div class="me-md-auto text-center text-md-start">
+            <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Bethany</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
-            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
+                    <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                 </div>
             </div> -->
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="https://www.facebook.com/nipindotourandtravel/" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/nipindotourandtravel/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.tiktok.com/@nipindotravel" class="tiktok"><i class="bx bxl-tiktok"></i></a>
-                <a href="https://www.youtube.com/channel/UCq0tFy14-h5WDFKU3Iphw2A" class="youtube"><i class="bx bxl-youtube"></i></a>
-            </div>
-        </div>
+                    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                        <a href="https://www.facebook.com/nipindotourandtravel/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/nipindotourandtravel/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@nipindotravel" class="tiktok"><i class="bx bxl-tiktok"></i></a>
+                        <a href="https://www.youtube.com/channel/UCq0tFy14-h5WDFKU3Iphw2A" class="youtube"><i class="bx bxl-youtube"></i></a>
+                    </div>
+                </div>
     </footer><!-- End Footer -->
-    
+
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
