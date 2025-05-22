@@ -1,3 +1,4 @@
+
 <!-- Modal -->
 <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -7,8 +8,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex align-items-center">
-
-                <img src="https://alfatihahtravel.com/admin/assets/images/<?php echo $paket_terbaru[0]['paket_img'] ?>" alt="Image" class="img-fluid" style="display: block;" id="mainImage">
+                <img src="https://rosanatravel.com/admin/assets/images/<?php echo $paket_terbaru[0]['paket_img'] ?>" alt="Image" class="img-fluid" loading="lazy style="display: block;" id="mainImage">
             </div>
             <div class="modal-footer">
                 <a href="https://api.whatsapp.com/send?phone=6281133399833&text=Halo%2C%20saya%20ingin%20tahu%20lebih%20lanjut%20mengenai%20Promo%20Terbaru%20<?php echo $paket_terbaru[0]['nama_program'] ?>%20yang%20ada%20di%20Website%2C%20%F0%9F%98%8A" class="btn btn-primary">Info Lebih Lanjut</a>
@@ -21,14 +21,23 @@
 <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-            <div class="col-xl-2 col-lg-4 col-md-3 col-sm-2 m-5">
+            <!--<div class="col-xl-2 col-lg-4 col-md-3 col-sm-2 m-5">
                 <img class="logo me-auto me-lg-0 img-fluid" src="<?php echo base_url('assets'); ?>/img/icon.png" alt="">
-            </div>
+            </div>-->
         </div>
         <br>
-        <h1>Nipindo Travel</h1>
-        <h2>Umroh, Haji & Visa</h2>
-        <a href="#about" class="btn-get-started scrollto">Mulai</a>
+        <h2 class="judul-sub" style="margin-bottom: 20px!important; font-size: 25px!important;font-weight: 500!important;">Umroh Murah Berkualitas</h2><br>
+        <h1 class="judul-utama">Selamat Datang<br>
+            Para Calon Tamu Allah<br>
+            Dihalaman Website<br>
+            Nipindo Travel</h1><br>
+        <a background-color: #009970; href="https://api.whatsapp.com/send/?phone=6281133399833&text=Halo%20Nipindo%20Travel%2C%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20paket%20Di%20Nipindo%20Travel%20&app_absent=0" class="btn-get-started scrollto" style="background-color: #009970!important;">Konsultasikan Sekarang</a>
+        <style>
+        .judul-sub {
+            margin-bottom: 20px;}
+        .judul-utama {
+            margin-top: 10px;}
+        </style>
     </div>
 </section>
 <!-- End Hero -->
@@ -38,8 +47,7 @@
     <section id="clients" class="clients">
         <div class="container">
 
-            <div class="row">
-
+            <div class="row d-flex align-items-center text-center">
 
                 <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="100">
                     <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
@@ -61,15 +69,122 @@
                     <img src="<?php echo base_url('assets/') ?>img/clients/iata.png" class="img-fluid" alt="">
                 </div>
 
-                <!-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-                </div> -->
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="<?php echo base_url('assets/') ?>img/clients/kan.png" class="img-fluid" alt="">
+                </div> 
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="<?php echo base_url('assets/') ?>img/clients/abacus-international-removebg-preview.png" class="img-fluid" alt="">
+                </div> 
 
             </div>
 
         </div>
     </section>
     <!-- End Clients Section -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+    <div class="section-title" data-aos="fade-right">
+        <h2>Paket Umroh</h2>
+    </div>
+    <div class="row">
+        <?php foreach ($paketumroh as $p) { ?>
+            <div class="col-md-4 d-flex align-items-stretch mb-4">
+                <a href="<?php echo base_url('paket/detail_paket/' . $p['id_paket']); ?>" class="icon-box-link" style="text-decoration: none; color: inherit;">
+                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="position: relative; <?php echo ($p['is_aktif'] == 0) ? 'pointer-events: none;' : ''; ?>">
+                        <img src="<?php echo 'https://rosanatravel.com/admin/assets/images/' . $p['paket_img']; ?>" 
+                            class="img-fluid mb-4" alt="" style="border-radius: 0.5rem; filter: <?php echo ($p['is_aktif'] == 0) ? 'grayscale(100%) opacity(0.7)' : 'none'; ?>;">
+                        
+                        <?php if ($p['is_aktif'] == 0) : ?>
+                            <div class="sold-out-overlay">
+                                <span>SOLD OUT</span>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <h4 style="color: #000; font-weight: bold;"> <?php echo $p['nama_program']; ?> </h4>
+                        <div class="row">
+                            <div class="col">
+                                <h6 style="font-size: small;">Uang Muka</h6>
+                                <h4 style="color: #db8d00;">Rp <?php echo number_format($p['uang_muka'], 0, ',', '.'); ?></h4>
+                            </div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=6281133399833&text=Halo%20Nipindo%20Travel%2C%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20paket%20<?php echo $p['nama_program']; ?>&app_absent=0" class="btn btn-success">Info Lebih Lanjut</a>
+                        <br>
+                    </div>
+                </a>
+            </div>
+        <?php } ?>
+    </div>
+
+    <!-- Paket Haji -->
+    <div class="section-title mt-5" data-aos="fade-right">
+        <h2>Paket Haji</h2>
+    </div>
+    <div class="row">
+        <?php foreach ($pakethaji as $p) { ?>
+            <div class="col-md-4 d-flex align-items-stretch mb-4">
+                <a href="<?php echo base_url('paket/detail_paket/' . $p['id_paket']); ?>" class="icon-box-link" style="text-decoration: none; color: inherit;">
+                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="position: relative; <?php echo ($p['is_aktif'] == 0) ? 'pointer-events: none;' : ''; ?>">
+                        <img src="<?php echo 'https://rosanatravel.com/admin/assets/images/' . $p['paket_img']; ?>" 
+                            class="img-fluid mb-4" alt="" style="border-radius: 0.5rem; filter: <?php echo ($p['is_aktif'] == 0) ? 'grayscale(100%) opacity(0.7)' : 'none'; ?>;">
+                        
+                        <?php if ($p['is_aktif'] == 0) : ?>
+                            <div class="sold-out-overlay">
+                                <span>SOLD OUT</span>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <h4 style="color: #000; font-weight: bold;"> <?php echo $p['nama_program']; ?> </h4>
+                        <div class="row">
+                            <div class="col">
+                                <h6 style="font-size: small;">Harga Mulai :</h6>
+                                <h4 style="color: #009970;"> <?php echo $p['matauangall'] . '&nbsp;' . number_format($p['uang_muka'], 0, ',', '.'); ?> </h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <?php } ?>
+    </div>
+
+    <!-- Paket Tour -->
+    <div class="section-title mt-5" data-aos="fade-right">
+        <h2>Paket Tour</h2>
+    </div>
+    <div class="row">
+        <?php foreach ($pakettour as $p) { ?>
+            <div class="col-md-4 d-flex align-items-stretch mb-4">
+                <a href="<?php echo base_url('paket/detail_paket/' . $p['id_paket']); ?>" class="icon-box-link" style="text-decoration: none; color: inherit;">
+                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="position: relative; <?php echo ($p['is_aktif'] == 0) ? 'pointer-events: none;' : ''; ?>">
+                        <img src="<?php echo 'https://rosanatravel.com/admin/assets/images/' . $p['paket_img']; ?>" 
+                            class="img-fluid mb-4" alt="" style="border-radius: 0.5rem; filter: <?php echo ($p['is_aktif'] == 0) ? 'grayscale(100%) opacity(0.7)' : 'none'; ?>;">
+                        
+                        <?php if ($p['is_aktif'] == 0) : ?>
+                            <div class="sold-out-overlay">
+                                <span>SOLD OUT</span>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <h4 style="color: #000; font-weight: bold;"> <?php echo $p['nama_program']; ?> </h4>
+                        <div class="row">
+                            <div class="col">
+                                <h6 style="font-size: small;">Harga Mulai :</h6>
+                                <h4 style="color: #009970;"> <?php echo $p['matauangall'] . '&nbsp;' . number_format($p['uang_muka'], 0, ',', '.'); ?> </h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -108,40 +223,8 @@
             </div>
 
         </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <!-- <section id="counts" class="counts">
-        <div class="container">
-
-            <div class="row counters">
-
-                <div class="col-lg-3 col-6 text-center">
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Clients</p>
-                </div>
-
-                <div class="col-lg-3 col-6 text-center">
-                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Projects</p>
-                </div>
-
-                <div class="col-lg-3 col-6 text-center">
-                    <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Hours Of Support</p>
-                </div>
-
-                <div class="col-lg-3 col-6 text-center">
-                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Hard Workers</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section> -->
-    <!-- End Counts Section -->
-
+    </section>
+    
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
         <div class="container">
@@ -197,7 +280,7 @@
             <div class="text-center" data-aos="zoom-in">
                 <h3>Tunggu Apa lagi ?</h3>
                 <p>Hubungi kami dan dapatkan promo dan penawaran menarik</p>
-                <a class="cta-btn" href="https://api.whatsapp.com/send/?phone=628123327059&text=Halo%20Rosana%20Travel%2C%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20paket%20Di%20Nipindo%20Travel%20&app_absent=0">Halo Nipindo Travel</a>
+                <a class="cta-btn" href="https://api.whatsapp.com/send/?phone=6281133399833&text=Halo%20Nipindo%20Travel%2C%20Saya%20ingin%20mengetahui%20lebih%20lanjut%20mengenai%20paket%20Di%20Nipindo%20Travel%20&app_absent=0">Halo Nipindo Travel</a>
             </div>
 
         </div>
@@ -227,7 +310,7 @@
                         <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
                                 <div class="icon"><img style="height: 2rem;" src="<?php echo base_url('assets/img/icons/hajitanpa.png') ?>" alt="" class=""></div>
-                                <h4><a href="">Haju Plus Tanpa Antri</a></h4>
+                                <h4><a href="">Haji Plus Tanpa Antri</a></h4>
                                 <p>Lewati antrian dan nikmati pengalaman Haji Plus tanpa menunggu antrian Haji.</p>
                             </div>
                         </div>
@@ -255,103 +338,7 @@
         </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10">
-                    <div class="section-title" data-aos="fade-right">
-                        <h2>Paket Umroh</h2>
-                    </div>
-                    <div class="row">
-                        <?php foreach ($paketumroh as $p) { ?>
-                            <div class="col-md-4 d-flex align-items-stretch mb-4">
-                                <a href="<?php echo base_url() . 'paket/detail_paket/' . $p['id_paket']; ?>">
-                                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                        <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
-                                        <h4><?php echo $p['nama_program'] ?></h4>
-                                        <div class="row">
-                                            <div class="col">
-                                                <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                    echo 'DP Mulai :';
-                                                                                } else {
-                                                                                    echo 'Harga Mulai :';
-                                                                                } ?></h6>
-                                                <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
-                                                                            } else {
-                                                                                echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
-                                                                            } ?></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div>
-                    <div class="section-title mt-5" data-aos="fade-right">
-                        <h2>Paket Haji</h2>
-                    </div>
-                    <div class="row">
-                        <?php foreach ($pakethaji as $p) { ?>
-                            <div class="col-md-4 d-flex align-items-stretch mb-4">
-                                <a href="<?php echo base_url() . 'paket/detail_paket/' . $p['id_paket']; ?>">
-                                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                        <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
-                                        <h4><?php echo $p['nama_program'] ?></h4>
-                                        <div class="row">
-                                            <div class="col">
-                                                <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                    echo 'DP Mulai :';
-                                                                                } else {
-                                                                                    echo 'Harga Mulai :';
-                                                                                } ?></h6>
-                                                <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
-                                                                            } else {
-                                                                                echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
-                                                                            } ?></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div>
-                    <div class="section-title mt-5" data-aos="fade-right">
-                        <h2>Paket Tour</h2>
-                    </div>
-                    <div class="row">
-                        <?php foreach ($pakettour as $p) { ?>
-                            <div class="col-md-4 d-flex align-items-stretch mb-4">
-                                <a href="<?php echo base_url() . 'paket/detail_paket/' . $p['id_paket']; ?>">
-                                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                                        <img src="<?php echo 'https://alfatihahtravel.com/admin/' . 'assets/images/' . $p['paket_img']; ?>" class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
-                                        <h4><?php echo $p['nama_program'] ?></h4>
-                                        <div class="row">
-                                            <div class="col">
-                                                <h6 style="font-size: small;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                    echo 'DP Mulai :';
-                                                                                } else {
-                                                                                    echo 'Harga Mulai :';
-                                                                                } ?></h6>
-                                                <h4 style="color: #009970;"><?php if ($p['tampilan'] == 'Uang Muka') {
-                                                                                echo $p['matauang'] . '&nbsp' . number_format($p['uang_muka'], 0, ",", ".");
-                                                                            } else {
-                                                                                echo $p['matauangall'] . '&nbsp' . number_format($p['harga_paket'], 0, ",", ".");
-                                                                            } ?></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Portfolio Section -->
+    
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
         <div class="container">
@@ -371,11 +358,11 @@
                                     <div class="row justify-content-between align-items-center">
                                         <div class="col-lg-5">
                                             <figure class="img-play-video">
-                                                <img src="https://alfatihahtravel.com/admin/assets/images/artikel/<?php echo $artikel_item['artikel_img']; ?>" alt="Image" class="img-fluid rounded-20">
+                                                <img src="https://rosanatravel.com/admin/assets/images/artikel/<?php echo $artikel_item['artikel_img']; ?>" alt="Image" class="img-fluid rounded-20">
                                             </figure>
                                         </div>
                                         <div class="col-lg-6">
-                                            <h4 class="text-left"><?php echo $artikel_item['judul_artikel']; ?></h4>
+                                            <h4 class="text-left" style="color: #000; font-style: bold;"><?php echo $artikel_item['judul_artikel']; ?></h4>
                                             <p><?php echo substr($artikel_item['konten'], 0, 100); ?>...</p>
                                         </div>
                                     </div>
@@ -387,205 +374,14 @@
             </div>
 
         </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials section-bg">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="section-title" data-aos="fade-right">
-                        <h2>Testimonials</h2>
-                        <p>Magnam dolores commodi suscipit uisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-                    </div>
-                </div>
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                                        Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <img src="<?php echo base_url('assets/') ?>img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram
-                                        malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <img src="<?php echo base_url('assets/') ?>img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                                        tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <img src="<?php echo base_url('assets/') ?>img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                                        minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <img src="<?php echo base_url('assets/') ?>img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                                        culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                                        quid.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <img src="<?php echo base_url('assets/') ?>img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section> -->
-    <!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <!-- <section id="team" class="team">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="section-title" data-aos="fade-right">
-                        <h2>Team</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem.</p>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-
-                        <div class="col-lg-6">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                                <div class="pic"><img src="<?php echo base_url('assets/') ?>img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mt-4 mt-lg-0">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                                <div class="pic"><img src="<?php echo base_url('assets/') ?>img/team/team-2.jpg" class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mt-4">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                                <div class="pic"><img src="<?php echo base_url('assets/') ?>img/team/team-3.jpg" class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <h4>William Anderson</h4>
-                                    <span>CTO</span>
-                                    <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 mt-4">
-                            <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                                <div class="pic"><img src="<?php echo base_url('assets/') ?>img/team/team-4.jpg" class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <h4>Amanda Jepson</h4>
-                                    <span>Accountant</span>
-                                    <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section> -->
-    <!-- End Team Section -->
+    </section>
 
     <section id="portfolio" class="portfolio">
         <div class="container">
 
             <div class="section-title" data-aos="fade-left">
                 <h2>Galeri</h2>
-                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-                        in iste officiis commodi quidem hic quas.</p> -->
+
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -593,7 +389,7 @@
                 <?php foreach ($galeri as $g) { ?>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="<?php echo 'https://alfatihahtravel.com/admin/assets/images/galeri/' . $g['nama']; ?>" class="img-fluid" alt="">
+                            <img src="<?php echo 'https://rosanatravel.com/admin/assets/images/galeri/' . $g['nama']; ?>" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <!-- <div class="portfolio-links">
                                         <a href="<?php echo 'http://localhost/nipindo/be/' . 'assets/uploads/' . $g['nama']; ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title=""><i class="bx bx-plus"></i></a>
@@ -604,8 +400,11 @@
                 <?php } ?>
             </div>
             <center>
-                <a class="py-2 px-4" style="border: #009970;color:white; background-color: #009970; border-radius: 1rem;" href="<?php echo base_url('index/galeri') ?>">Lebih Banyak <i class="bx bx-right-arrow-alt"></i></a>
-            </center>
+    <button id="loadMoreBtn" class="py-2 px-4" style="border: #009970; color: white; background-color: #009970; border-radius: 1rem;">
+        Lebih Banyak <i class="bx bx-right-arrow-alt"></i>
+    </button>
+</center>
+
         </div>
     </section>
     <!-- End Portfolio Section -->
@@ -618,6 +417,10 @@
                     <div class="section-title">
                         <h2>Kontak Kami</h2>
                         <p>Temukan Dukungan untuk Kebutuhan Perjalanan Anda. Dapatkan jawaban dan solusi atas pertanyaan Anda di sini. Kami selalu siap untuk membantu Anda.</p>
+                        <br>
+                        <img src="<?php echo base_url('assets/') ?>img/portfolio/kantornipindo.jpeg" 
+                            class="img-fluid mb-4" alt="" style="border-radius: 0.5rem;">
+                        
                     </div>
                 </div>
 
@@ -633,40 +436,17 @@
                             <div class="info">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email :</h4>
-                                <p>nipindotravel@gmail.com</p>
+                                <p>info@nipindotravel.com</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="info w-100 mt-4">
                                 <i class="bi bi-phone"></i>
                                 <h4>Nomor HP / Whatsapp :</h4>
-                                <p>+62 812 3327 059</p>
+                                <p>+62 811 333 99 833</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form> -->
                 </div>
             </div>
 
@@ -675,8 +455,36 @@
 
 </main><!-- End #main -->
 
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let items = document.querySelectorAll(".portfolio-item");
+        let itemsPerPage = 6; 
+        let loadMoreBtn = document.getElementById("loadMoreBtn");
+
+        function updateVisibility() {
+            let hiddenItems = Array.from(items).filter(item => item.style.display === "none");
+            hiddenItems.slice(0, itemsPerPage).forEach(item => item.style.display = "block");
+            if (hiddenItems.length <= itemsPerPage) {
+                loadMoreBtn.style.display = "none";
+            }
+        }
+
+        items.forEach((item, index) => {
+            if (index >= itemsPerPage) {
+                item.style.display = "none";
+            }
+        });
+
+        loadMoreBtn.addEventListener("click", function () {
+            updateVisibility();
+        });
+    });
+</script>
+
 
 <script>
     // Fungsi untuk mendapatkan nilai dari sessionStorage
@@ -705,4 +513,5 @@
         showPopup();
         // sessionStorage.clear(); // Jika perlu menghapus semua data sesi
     });
+    
 </script>

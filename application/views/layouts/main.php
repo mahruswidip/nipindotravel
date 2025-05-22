@@ -1,10 +1,3 @@
-<!-- /*
-* Template Name: Tour
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
-<!doctype html>
 <html lang="en">
 
 
@@ -21,10 +14,10 @@
     <link href="<?php echo base_url('assets/') ?>img/icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
 
     <!-- Vendor CSS Files -->
-    <link href="<?php echo base_url('assets/') ?>vendor/aos/aos.css" rel="stylesheet">
+    <!--<link href="<?php echo base_url('assets/') ?>vendor/aos/aos.css" rel="stylesheet">-->
     <link href="<?php echo base_url('assets/') ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/') ?>vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="<?php echo base_url('assets/') ?>vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -34,6 +27,26 @@
 
     <!-- Template Main CSS File -->
     <link href="<?php echo base_url('assets/') ?>css/style.css" rel="stylesheet">
+    <style>
+.sold-out-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sold-out-overlay span {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+</style>
+
 
     <!-- =======================================================
   * Template Name: Bethany - v4.7.0
@@ -50,8 +63,6 @@
         <div class="container">
             <div class="header-container d-flex align-items-center justify-content-between">
                 <div class="logo">
-                    <!-- <h1 class="text-light"><a href="index.html"><span>Bethany</span></a></h1> -->
-                    <!-- Uncomment below if you prefer to use an image logo -->
                     <a href="<?php echo site_url(); ?>"><img src="<?php echo base_url('assets'); ?>/img/logonip.png" alt="" class="img-fluid"></a>
                 </div>
 
@@ -90,11 +101,12 @@
                         </div>
                         <br>
                         <p>
+                            <strong>PT Nipindo Antar Wisata</strong><br>
                             Jl. Pegambiran No.5, RT.12/RW.7, <br>
                             Rawamangun, Kec. Pulo Gadung,<br>
                             Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220 <br><br>
-                            <strong>Nomor HP:</strong> +62 812 3327 059<br>
-                            <strong>Email:</strong> nipindotravel@gmail.com<br>
+                            <strong>Nomor HP:</strong> +62 811 333 99 833<br>
+                            <strong>Email:</strong> info@nipindotravel.com<br>
                         </p>
                     </div>
 
@@ -133,11 +145,11 @@
 
         <div class="container d-md-flex py-4">
 
-            <!-- <div class="me-md-auto text-center text-md-start">
+           <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
                     &copy; Copyright <strong><span>Bethany</span></strong>. All Rights Reserved
                 </div>
-                <div class="credits"> -->
+                <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
@@ -148,16 +160,18 @@
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
                 <a href="https://www.facebook.com/nipindotourandtravel/" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://www.instagram.com/nipindotourandtravel/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.tiktok.com/@nipindotravel" class="tiktok"><i class="bx bxl-tiktok"></i></a>
+                <a href="https://www.youtube.com/channel/UCq0tFy14-h5WDFKU3Iphw2A" class="youtube"><i class="bx bxl-youtube"></i></a>
             </div>
         </div>
     </footer><!-- End Footer -->
+    
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="<?php echo base_url('assets/') ?>vendor/purecounter/purecounter.js"></script>
-    <script src="<?php echo base_url('assets/') ?>vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="<?php echo base_url('assets/') ?>vendor/aos/aos.js"></script>
+    <!--<script src="<?php echo base_url('assets/') ?>vendor/aos/aos.js"></script>-->
     <script src="<?php echo base_url('assets/') ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url('assets/') ?>vendor/glightbox/js/glightbox.min.js"></script>
     <script src="<?php echo base_url('assets/') ?>vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -166,7 +180,6 @@
 
     <!-- Template Main JS File -->
     <script src="<?php echo base_url('assets/') ?>js/main.js"></script>
-
 
 </body>
 

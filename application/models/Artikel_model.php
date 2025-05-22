@@ -31,6 +31,7 @@ class Artikel_model extends CI_Model
     {
         $this->db->order_by('artikel.id_artikel', 'desc');
         // $this->db->join('tbl_users', 'tbl_users.id_artikel=artikel.id_artikel', 'left');
+        $this->db->where('travel', 'Nipindo Travel');
         if (isset($params) && !empty($params)) {
             $this->db->limit($params['limit'], $params['offset']);
         }

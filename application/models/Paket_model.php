@@ -57,6 +57,7 @@ class Paket_model extends CI_Model
     {
         $this->db->where('kategori', 'Umroh');
         $this->db->where('travel', 'Nipindo Travel');
+        $this->db->join('keberangkatan', 'keberangkatan.id_keberangkatan = paket.fk_id_keberangkatan', 'left');
         $this->db->where('publish', '1'); // Tambahkan kondisi is_aktif = 1
         $this->db->order_by('paket.id_paket', 'desc');
         return $this->db->get('paket')->result_array();
@@ -66,6 +67,7 @@ class Paket_model extends CI_Model
     {
         $this->db->where('kategori', 'Haji');
         $this->db->where('travel', 'Nipindo Travel');
+        $this->db->join('keberangkatan', 'keberangkatan.id_keberangkatan = paket.fk_id_keberangkatan', 'left');
         $this->db->where('publish', '1'); // Tambahkan kondisi is_aktif = 1
         $this->db->order_by('paket.id_paket', 'desc');
         return $this->db->get('paket')->result_array();
@@ -75,6 +77,7 @@ class Paket_model extends CI_Model
     {
         $this->db->where('kategori', 'Tour');
         $this->db->where('travel', 'Nipindo Travel');
+        $this->db->join('keberangkatan', 'keberangkatan.id_keberangkatan = paket.fk_id_keberangkatan', 'left');
         $this->db->where('publish', '1'); // Tambahkan kondisi is_aktif = 1
         $this->db->order_by('paket.id_paket', 'desc');
         return $this->db->get('paket')->result_array();
@@ -85,8 +88,16 @@ class Paket_model extends CI_Model
 
         $this->db->where('promo', '1');
         $this->db->where('paket.travel', 'Nipindo Travel');
+        $this->db->join('keberangkatan', 'keberangkatan.id_keberangkatan = paket.fk_id_keberangkatan', 'left');
         $this->db->order_by('promo', 'DESC');
         $query = $this->db->get('paket');
+
+        // $this->db->select('paket.*');
+        // $this->db->from('paket');
+        // $this->db->where('paket.publish', 1);
+        // $this->db->where('paket.travel', 'Rosana Travel');
+        // $this->db->where('paket.promo', 1);
+        // $this->db->order_by('paket.id_paket', 'DESC');
 
         return $query->result_array();
         // return $this->db->get()->result_array();
@@ -120,7 +131,7 @@ class Paket_model extends CI_Model
     }
     function get_artikel_nipindo_only($params = array())
     {
-        // $this->db->where('travel', 'Nipindo Travel');
+        $this->db->where('travel', 'Nipindo Travel');
         $this->db->order_by('artikel.id_artikel', 'desc');
         return $this->db->get('artikel')->result_array();
     }
